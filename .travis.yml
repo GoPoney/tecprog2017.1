@@ -9,7 +9,8 @@ script:
   - pep8 --show-source --show-pep8 *.py */*.py */**/*.py
   - cd tests
   - pytest
-  - coverage run --source=tests main.py test
+  - coverage run --source unittest test_gameCanvas.py test
+  - coverage run --source unittest test_gameObject.py test
 after-sucess:
   - coverage
   - coverage report
